@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>  Ankieta które danie</title>
+<meta charset="utf-8">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+    <script>
+    function spr()
+    {
+
+              var odpa = document.getElementById("odpa").checked;
+              var odpb = document.getElementById("odpb").checked;
+              var odpc = document.getElementById("odpc").checked;
+
+              console.log(odpa,odpb,odpc);
+              if(odpc==true) odp = "dobrze";
+              else odp ="niepoprawnie";
+              document.getElementById("wynik").innerHTML = ""+odp;
+      }
+             </script>
+
+
+<div id="test">
+
+<h3> Które danie jest najmniej kaloryczne?</h3>
+
+<input type ="radio"  name="wybory" value="A" id="odpa"> bigos<br>
+<input type ="radio"  name="wybory" value="B" id="odpb"> kotlet<br>
+<input type ="radio"  name="wybory" value="C" id="odpc"> sałatka<br><br>
+<button onclick= "spr()"> Sprawdź </button>
+<br><br>
+
+</div>
+
+<div id="wynik">
+
+Tu sprawdzisz czy masz rację.
+    </div>
+</body>
+</html>
